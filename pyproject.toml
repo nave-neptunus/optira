@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optira"
+version = "0.1.0"
+description = "Student prototype: phone-video pupillary light reflex features. Unvalidated."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Evan Arumbaka" }, { name = "Nithilan M." }]
+dependencies = ["numpy", "scipy", "matplotlib", "flask"]
+
+[project.optional-dependencies]
+video = ["opencv-python-headless", "mediapipe"]
+tunnel = ["pyngrok"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,3 @@
+# Optional: only needed to read real video files. The tests do not need these.
+opencv-python-headless
+mediapipe
